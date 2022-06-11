@@ -3,7 +3,7 @@ require 'PHPMailer/PHPMailerAutoload.php';
 
 class sendMailToConfirmSession 
 {
-    $user="null"
+    $user="null";
     public function __construct($user)
     {
         $this->$user = $user;   
