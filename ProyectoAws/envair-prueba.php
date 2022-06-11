@@ -3,6 +3,11 @@ require 'PHPMailer/PHPMailerAutoload.php';
 
 class sendMailToConfirmSession 
 {
+    $user="null"
+    public function __construct($user)
+    {
+        $this->$user = $user;   
+    }
 
     public function sendMail()
     {
@@ -22,7 +27,7 @@ class sendMailToConfirmSession
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'Inicio de sesion';
-        $mail->Body    = "Se ha detectado un inicio de sesion con el usuario";
+        $mail->Body    = "Se ha detectado un inicio de sesion con el usuario $user";
         $mail->AltBody = '...';
 
         if(!$mail->send()) {
