@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
     if (isset($_FILES['uploadedFile']) ) {
-        echo "HOla";
+        
         // get details of the uploaded file
         $fileTmpPath = $_FILES['uploadedFile']['tmp_name'];
         $fileName = $_FILES['uploadedFile']['name'];
@@ -25,11 +25,15 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
             if(move_uploaded_file($fileTmpPath, $dest_path))
             {
             $message ='File is successfully uploaded.';
+
+            
             }
             else
             {
             $message = 'There was some error moving the file to upload directory. Please make sure the upload directory is writable by web server.';
             }
+            echo $message;
+            echo "<a>regresar</a>"
         }
     
     }
