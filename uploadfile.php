@@ -1,22 +1,6 @@
 <?php
-/* 
-$ftp_server="";
-$ftp_user="";
-$ftp_pass="";
 
-$con_id= ftp_connect($ftp_server);
-$lr= ftp_login($con_id,$ftp_user,$ftp_pass);
-
-if ((!$con_id) || (!$lr)) {
-    echo "No se pudo realizar la conexion";
-    exit;
-}else{
-    echo "Conectado correctamente";
-    $temp=explode(".",$_FILES["archivo"]["name"]);
-    $source_file=$_FILES["archivo"]["tmp_name"]
-}
-*/
-if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Subir') {
+if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
     if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOAD_ERR_OK) {
         // get details of the uploaded file
         $fileTmpPath = $_FILES['uploadedFile']['tmp_name'];
@@ -26,7 +10,7 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Subir') {
         $fileNameCmps = explode(".", $fileName);
         $fileExtension = strtolower(end($fileNameCmps));
 
-        $newFileName = md5(time() . $fileName) . '.' . $fileExtension
+        $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
     
         $allowedfileExtensions = array('jpg', 'gif', 'png', 'zip', 'txt', 'xls', 'doc');
         if (in_array($fileExtension, $allowedfileExtensions)) {
@@ -46,3 +30,20 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Subir') {
     
     }
 }
+/* 
+$ftp_server="";
+$ftp_user="";
+$ftp_pass="";
+
+$con_id= ftp_connect($ftp_server);
+$lr= ftp_login($con_id,$ftp_user,$ftp_pass);
+
+if ((!$con_id) || (!$lr)) {
+    echo "No se pudo realizar la conexion";
+    exit;
+}else{
+    echo "Conectado correctamente";
+    $temp=explode(".",$_FILES["archivo"]["name"]);
+    $source_file=$_FILES["archivo"]["tmp_name"]
+}
+*/
