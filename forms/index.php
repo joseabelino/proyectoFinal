@@ -52,7 +52,6 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
           <li><a href="../reset-password.php" class="nav-link scrollto"><i class="fa fa-refresh"></i> <span>Cambiar contraseña</span></a></li>
           <li><a href="../logout.php" class="nav-link scrollto"><i class="fa fa-mail-reply-all"></i> <span>Salir</span></a></li>
-          <
           <form action="" method="post" enctype="multipart/form-data">
           <input type="file" name="archivo" id="archivo" style="width:100%"><br><br>
           <input type="submit" name="Subir" id="Subir" value="Subir archivo" />
