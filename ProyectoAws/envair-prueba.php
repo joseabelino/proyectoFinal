@@ -27,7 +27,7 @@ class sendMailToConfirmSession
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'Inicio de sesion';
-        $mail->Body    = "Se ha detectado un inicio de sesion con el usuario $user";
+        $mail->Body    = "Se ha detectado un inicio de sesion con el usuario {$this->$user}";
         $mail->AltBody = '...';
 
         if(!$mail->send()) {
