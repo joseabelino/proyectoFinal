@@ -4,7 +4,6 @@ require 'PHPMailer/PHPMailerAutoload.php';
 class sendMailToConfirmSession 
 {
     
-
     function __construct($user) {
         
     }
@@ -41,4 +40,4 @@ class sendMailToConfirmSession
 
 $sendmail = new sendMailToConfirmSession();
 
-$sendmail.sendMail();
+$sendmail->sendMail();
