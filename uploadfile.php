@@ -19,7 +19,7 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
         $allowedfileExtensions = array('jpg', 'gif', 'png', 'zip', 'txt', 'xls', 'doc');
         if (in_array($fileExtension, $allowedfileExtensions)) {
         // directory in which the uploaded file will be moved
-            $uploadFileDir = './files/';
+            $uploadFileDir = 'files/';
             $dest_path = $uploadFileDir . $newFileName;
             
             if(move_uploaded_file($fileTmpPath, $dest_path))
