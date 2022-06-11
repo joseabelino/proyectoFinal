@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
     if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOAD_ERR_OK) {
-        echo "HOla"
+        echo "HOla";
         // get details of the uploaded file
         $fileTmpPath = $_FILES['uploadedFile']['tmp_name'];
         $fileName = $_FILES['uploadedFile']['name'];
