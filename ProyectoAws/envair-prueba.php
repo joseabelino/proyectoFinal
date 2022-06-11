@@ -3,10 +3,10 @@ require 'PHPMailer/PHPMailerAutoload.php';
 
 class sendMailToConfirmSession 
 {
-    public $user="null";
+    
 
     function __construct($user) {
-        $user= $user;
+        
     }
 
     public function sendMail()
@@ -27,7 +27,7 @@ class sendMailToConfirmSession
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'Inicio de sesion';
-        $mail->Body    = "Se ha detectado un inicio de sesion con el usuario $user";
+        $mail->Body    = "Se ha detectado un inicio de sesion con el usuario";
         $mail->AltBody = '...';
 
         if(!$mail->send()) {
@@ -39,6 +39,6 @@ class sendMailToConfirmSession
     }
 }
 
-$sendmail = new sendMailToConfirmSession("Juan");
+$sendmail = new sendMailToConfirmSession();
 
 $sendmail.sendMail();
