@@ -33,7 +33,7 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
             $message = 'There was some error moving the file to upload directory. Please make sure the upload directory is writable by web server.';
             }
             echo $message;
-            echo "<br><a>regresar</a>";
+            echo "<br><a href='forms/index.php'>Regresar</a>";
         }
     
     }
