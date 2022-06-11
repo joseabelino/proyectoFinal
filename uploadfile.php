@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
-    if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOAD_ERR_OK) {
+    if (isset($_FILES['uploadedFile']) ) {
         echo "HOla";
         // get details of the uploaded file
         $fileTmpPath = $_FILES['uploadedFile']['tmp_name'];
