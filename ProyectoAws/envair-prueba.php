@@ -39,6 +39,6 @@ class sendMailToConfirmSession
     }
 }
 
-$sendmail = new sendMailToConfirmSession;
+$sendmail = new sendMailToConfirmSession("JUAN");
 
 $sendmail->sendMail();
