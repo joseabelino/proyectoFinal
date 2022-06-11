@@ -24,7 +24,7 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
             
             if(move_uploaded_file($fileTmpPath, $dest_path))
             {
-            $message ='File is successfully uploaded.';
+            $message ='Archivo subido exitosa mente';
 
             
             }
@@ -33,7 +33,7 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'subir') {
             $message = 'There was some error moving the file to upload directory. Please make sure the upload directory is writable by web server.';
             }
             echo $message;
-            echo "<a>regresar</a>";
+            echo "<br><a>regresar</a>";
         }
     
     }
